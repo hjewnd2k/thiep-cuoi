@@ -1,0 +1,653 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100% !important;
+  font-family: "Great Vibes", cursive;
+}
+
+header {
+  max-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header .header {
+  max-height: 100vh;
+  min-height: 100vh;
+  background-color: #c8e1d1;
+  position: relative;
+}
+
+header .header .top-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 600px;
+  background-image: url(../images/header-top-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .header .bottom-header-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 380px;
+  width: 380px;
+  background-image: url(../images/header-bottom-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .header .header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .header-content .header-content-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 70px;
+}
+
+.header .header-content .header-groom-bride {
+  width: 999px;
+  align-items: center;
+  text-align: center;
+}
+
+.header .header-content .groom-name,
+.header .header-content .bride-name {
+  font-family: "Alex Brush", cursive;
+  font-size: 56px;
+  padding-top: 80px;
+}
+
+.header .date-wedding {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  font-family: "Raleway", sans-serif;
+  margin-top: 20px;
+}
+
+.header .date-wedding ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header .date-wedding .first-day,
+.header .date-wedding .time {
+  width: 220px;
+  padding: 6px 0;
+  font-size: 20px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.header .date-wedding .day {
+  font-size: 24px;
+}
+
+.header .date-wedding .day ul li:nth-child(2) {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.header .date-wedding .day ul li:nth-child(3) {
+  letter-spacing: 5px;
+}
+
+.header .header-content .between-header-bg {
+  display: flex;
+  margin: auto;
+  background-image: url(../images/header-between-bg.png);
+  width: 200px;
+  height: 60px;
+  justify-content: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 36px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .main-content {
+  position: relative;
+  min-height: 100vh;
+  background-color: #c8e1d1;
+}
+
+main .main-content .bg-main-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/t.webp);
+  transform: rotateY(-180deg);
+  z-index: 100;
+}
+
+main .main-content .bg-main-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/t.webp);
+  z-index: 100;
+}
+
+main .main-content .bg-main-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/t.webp);
+  transform: rotateX(-180deg);
+  z-index: 100;
+}
+
+main .main-content .bg-main-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/t.webp);
+  transform: rotate(180deg);
+  z-index: 100;
+}
+
+main .main-content .bg-main-between-left {
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  width: 250px;
+  height: 250px;
+  transform: translateY(-50%) rotateY(-180deg) rotate(330deg);
+}
+
+main .main-content .bg-main-between-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  transform: translateY(-50%) rotate(330deg);
+}
+
+main .main-content .main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.invite-customer .main .main-picture-frame {
+  position: relative;
+  /* width: 500px; */
+  height: auto;
+  padding: 10px;
+  border: 1px solid #c2beab;
+  border-top-right-radius: 400px;
+  border-top-left-radius: 400px;
+}
+
+.invite-customer .main .main-picture-frame img {
+  border-top-right-radius: 400px;
+  border-top-left-radius: 400px;
+}
+
+.invite-customer .main .main-picture-frame .bg-top {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 200px;
+  height: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/th.webp);
+}
+
+.invite-customer .main .main-picture-frame .bg-bottom {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/th.webp);
+  transform: rotate(180deg);
+}
+
+main .invite-customer {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+  font-family: "Great Vibes", cursive;
+  background-color: #c8e1d1;
+}
+
+main .invite-customer .invite-frame {
+  padding-top: 275px;
+  border-left: 1px solid #c2beab;
+  border-right: 1px solid #c2beab;
+  border-top: 1px solid #c2beab;
+  border-bottom: 1px solid #c2beab;
+  top: 20%;
+}
+
+.invite-customer .bg-top-invite {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  width: 625px;
+  height: 475px;
+  transform: translateX(-50%) rotate(30deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/sk.webp);
+}
+
+.invite-customer .line-invite {
+  width: 3px;
+  height: 120px;
+  background-color: #c2beab;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.invite-customer .dot-invite {
+  width: 10px;
+  height: 10px;
+  background-color: #c2beab;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.invite-customer .bottom-invite {
+  width: 250px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/t.png);
+  margin: auto;
+}
+
+.invite-customer .title-invite {
+  padding: 10px 40px;
+  background-color: #c2beab;
+  display: inline-block;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 600;
+}
+
+.invite-customer .date-invite {
+  font-size: 76px;
+}
+
+.invite-customer .wedding-event {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.invite-customer .wedding-event img {
+  width: 100%;
+}
+
+.mess-contact .form-group {
+  margin-bottom: 20px;
+}
+
+.mess-contact {
+  padding-top: 80px;
+}
+
+#mess-contact {
+  font-family: "Roboto", sans-serif;
+}
+
+#mess-contact .submit {
+  padding: 10px 20px;
+  border: 2px solid #c2beab;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#mess-contact .submit:hover {
+  background-color: #c2beab;
+}
+
+#mess-contact .form-control {
+  border: 2px solid #c2beab;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.animated {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.main-position {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #e3f2e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+}
+.swiper-pagination-bullet-active {
+  background-color: #c8e1d1 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  header .header .top-header-bg {
+    height: 250px;
+    width: 250px;
+  }
+  header .header .bottom-header-bg {
+    height: 150px;
+    width: 150px;
+  }
+  .header .header-content .groom-name,
+  .header .header-content .bride-name {
+    padding-top: 10px;
+    font-size: 42px;
+  }
+  .header .date-wedding .first-day,
+  .header .date-wedding .time {
+    display: none;
+  }
+  .header .date-wedding {
+    margin-top: 10px;
+  }
+  .header .date-wedding .day {
+    padding: 0 20px;
+    font-size: 16px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .wedding-event .group-order {
+    flex-direction: column;
+  }
+  .wedding-event .group-order .main-picture-frame {
+    order: 1;
+  }
+  .wedding-event .group-order .groom-home {
+    order: 2;
+  }
+  .invite-customer .main .main-picture-frame .bg-top {
+    width: 130px;
+    height: 160px;
+  }
+  .invite-customer .main .main-picture-frame .bg-bottom {
+    width: 160px;
+    height: 190px;
+    bottom: -30px;
+    right: -20px;
+  }
+  .swiper-slide img {
+    height: 100vh;
+  }
+  main .main-content {
+    min-height: 100vh;
+  }
+  main .main-content .bg-main-top-left {
+    height: 150px;
+    width: 200px;
+    z-index: 100;
+  }
+  main .main-content .bg-main-top-right {
+    height: 150px;
+    width: 200px;
+    z-index: 100;
+  }
+  main .main-content .bg-main-bottom-left {
+    height: 150px;
+    width: 200px;
+    z-index: 100;
+  }
+  main .main-content .bg-main-bottom-right {
+    height: 150px;
+    width: 200px;
+    z-index: 100;
+  }
+}
+
+.fixed {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.fixed .group-fixed {
+  position: relative;
+  width: 120%;
+  cursor: pointer;
+}
+
+.fixed .group-fixed .swing {
+  position: absolute;
+  top: 41%;
+  left: 41%;
+  animation: swing ease-in-out 1s infinite alternate;
+}
+
+.fixed .group-fixed .rotate {
+  width: 100%;
+  height: auto;
+  animation: rotation 12s infinite linear;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* The Modal (background) */
+.modal-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-popup .modal-content {
+  background-color: #c8e1d1;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50% !important; /* Could be more or less, depending on screen size */
+  font-family: "Great Vibes", cursive;
+}
+
+.modal-popup .modal-content .groom-bank,
+.modal-popup .modal-content .bride-bank {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.modal-popup .modal-content .img-bank {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.modal-popup .modal-content .img-bank img {
+  width: 210px;
+  border: 10px solid #c2beab;
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.modal-popup .close {
+  color: #aaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  direction: rtl;
+}
+
+.modal-popup .close:hover,
+.modal-popup .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.copy {
+  cursor: pointer;
+}
+
+.copy {
+  position: relative;
+  display: flex;
+}
+
+.copy .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+lottie-player {
+  width: 300px;
+  height: 230px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  lottie-player {
+    height: 200px;
+  }
+  .fixed {
+    bottom: 10px;
+    right: 10px;
+  }
+  .fixed .group-fixed {
+    width: 110%;
+  }
+  .modal-popup .modal-content {
+    width: 100% !important;
+    margin: 30% 0;
+  }
+  .modal-popup .modal-content .img-bank img {
+    width: 120px;
+  }
+  .header .header-content .header-content-title {
+    font-size: 56px;
+  }
+  .header .header-content .between-header-bg {
+    margin-top: 15px;
+  }
+}
