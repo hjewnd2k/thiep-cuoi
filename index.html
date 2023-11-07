@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="_csrf" th:content="${_csrf.token}" />
     <meta name="_csrf_parameter_name" th:content="${_csrf.parameterName}" />
-    <title>Thiệp cưới Tiến Vũ - Phương Mai</title>
+    <title>Thiệp cưới Nhật Tân - Phương Mai</title>
     <meta
       name="description"
       content="Thay cho tấm thiệp hồng trao tay. Vợ chồng chúng tôi gửi tới bạn chiếc thiệp online xinh xinh này. Mong bạn bớt chút thời gian quý báu của mình tới dự tiệc, rất cảm ơn và vinh dự khi bạn hiện diện tại lễ cưới của vợ chồng chúng tôi."
     />
-    <meta property="og:title" content="Thiệp cưới Tiến Vũ - Phương Mai" />
+    <meta property="og:title" content="Thiệp cưới Nhật Tân - Phương Mai" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
@@ -72,7 +72,7 @@
               <h2
                 class="groom-name animate__animated animate__backInLeft animate__slower animate__delay-0.5s"
               >
-                Tiến Vũ
+                Nhật Tân
               </h2>
             </div>
             <div class="col-md-4 col-12">
@@ -138,7 +138,7 @@
             <h1 class="title-invite animated">Sự kiện</h1>
             <div class="row align-items-center main">
               <div class="col-md-6 main-picture-frame frame-1 animated">
-                <img src="./images/268A4686.jpg" loading="lazy" />
+                <img src="./images/1.jpg" loading="lazy" />
                 <div class="bg-top"></div>
                 <div class="bg-bottom"></div>
               </div>
@@ -303,7 +303,7 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h1>Tiến Vũ - Phương Mai chân thành cảm ơn!!!</h1>
+        <h1>Nhật Tân - Phương Mai chân thành cảm ơn!!!</h1>
         <div class="groom-bank">
           <div class="img-bank">
             <img src="./images/Logo_VCB.png" loading="lazy" />
@@ -321,7 +321,7 @@
                 <i class="fas fa-copy"></i>
               </span>
             </p>
-            <p>Chủ TK: Nguyễn Tiến Vũ</p>
+            <p>Chủ TK: Nguyễn Nhật Tân</p>
           </div>
         </div>
         <div class="bride-bank">
@@ -386,23 +386,36 @@
       $("#submit").click(function (e) {
         e.preventDefault();
         var header = $("meta[name='_csrf_header']").attr("content");
-        console.log($("#mess-contact").serializeArray());
-        $.ajax({
-          type: "post",
-          //   headers: header,
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
-          CORS: true,
-          url: "https://script.google.com/macros/s/AKfycby94L0JBjzGGZD3v1l8G6cm7auTTbmVvdYGVx1f3e-ct1Qf8zJ0iBz29vRBp-wz4ajQEA/exec",
-          data: $("#mess-contact").serializeArray(),
-          success: function (data) {
-            // alert('thành công!');
-          },
-          error: function (data) {
-            // alert('thất bại!');
-          },
-        });
+        const arrayData = $("#mess-contact").serializeArray();
+        console.log(arrayData);
+        const data = arrayData.reduce((prev, curr) => {
+          prev[curr.name] = curr.value;
+          return prev;
+        }, {});
+        data.origin = window.location.origin;
+        // $.ajax({
+        //   type: "post",
+        //   headers: header,
+        //   url: "https://script.google.com/macros/s/AKfycby94L0JBjzGGZD3v1l8G6cm7auTTbmVvdYGVx1f3e-ct1Qf8zJ0iBz29vRBp-wz4ajQEA/exec",
+        //   data: JSON.stringify(data),
+        //   success: function (data) {
+        //     // alert('thành công!');
+        //   },
+        //   error: function (data) {
+        //     // alert('thất bại!');
+        //   },
+        // });
+        fetch(
+          "https://script.google.com/macros/s/AKfycby94L0JBjzGGZD3v1l8G6cm7auTTbmVvdYGVx1f3e-ct1Qf8zJ0iBz29vRBp-wz4ajQEA/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
       });
       $(".between-header-bg").click(function (e) {
         e.preventDefault();
