@@ -105,6 +105,7 @@ header .header .header-content {
 }
 
 .header .header-content .between-header-bg {
+  position: relative;
   display: flex;
   margin: auto;
   background-image: url(../images/header-between-bg.png);
@@ -115,6 +116,12 @@ header .header .header-content {
   font-size: 36px;
   margin-top: 50px;
   cursor: pointer;
+}
+
+img.arrow {
+  position: absolute;
+  width: 80px;
+  top: -56px;
 }
 
 main {
