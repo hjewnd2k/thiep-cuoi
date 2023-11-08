@@ -99,3 +99,12 @@ $(window).on("load scroll", function () {
     $(".thank-invite").addClass("animate__fadeInLeft");
   }
 });
+
+$(".box span").click(function () {
+  if ($(this).hasClass("spin")) {
+    $(".box span").removeClass("spin");
+  } else {
+    $(".box span").removeClass("spin");
+    $(this).addClass("spin");
+  }
+});
