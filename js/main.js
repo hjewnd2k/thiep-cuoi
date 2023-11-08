@@ -100,6 +100,7 @@ $(window).on("load scroll", function () {
   }
 });
 
+// click box
 $(".box span").click(function () {
   if ($(this).hasClass("spin")) {
     $(".box span").removeClass("spin");
